@@ -1,7 +1,7 @@
 var user = "";
-var apiUrl = "https://localhost:44362/";
+//var apiUrl = "https://localhost:44362/";
 //var apiUrl = "http://192.168.0.5:8091/";
-//var apiUrl = "https://www.solucioneserp.com.ar/API_DINAMICA_API/";
+var apiUrl = "https://www.solucioneserp.com.ar/API_DINAMICA_API/";
 var apis = [];
 var datosGrilla=[];
 var strApi='';
