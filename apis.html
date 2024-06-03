@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reporte de API Rest</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/tabulator-tables@5.4.4/dist/css/tabulator.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/tabulator-tables@5.4.4/dist/js/tabulator.min.js"
+    ></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="script.js" ></script>
+    
+  </head>
+  <body onload="getUser();">
+    <div id="loadingContainer"></div>
+    <h3>Reporte de API Rest</h3>
+    <div  class="container">
+        <table id="tabla">
+            <tr>
+                <td>
+                    <div class="form-group">
+                      <label for="comboApi">Seleccionar una API:</label>
+                      <select id="comboApi" onchange="onchangeApi()"></select>                      
+                    </div>
+                  </td>                  
+            </tr>
+        </table>  
+    </div>
+    <div class="container">
+      <table id="tabla">
+        <tr>
+          <td>
+            <div class="form-group">
+              <label id="lbl01" for="input01" style="display:none;"></label>
+              <input id="input01"  style="display:none;" />
+              <!-- <input type="date" id="fechaInicio" /> -->
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+                <label id="lbl02" for="input02"  style="display:none;"></label>
+                <input id="input02"  style="display:none;"/>
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+                <label id="lbl03" for="input03"  style="display:none;"></label>
+                <input id="input03"  style="display:none;"/>
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+                <label id="lbl04" for="input04" style="display:none;"></label>
+                <input id="input04"  style="display:none;"/>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div class="button-group">
+        <button id="btnActualizar" class="btnActualizar" onclick="actualizar();" ><i class="fa fa-refresh"></i>Actualizar</button>
+        <button id="btnVerApi" class="btnVer" onclick="verApi();"><i class="fas fa-info-circle"></i></button>
+        <button id="btnDescarga" class="btnDescargar" onclick="descargar()"><i class="fa fa-download"></i>Descargar</button>
+        <a id="descargar" style="display:none;" >Descargar</a>
+      </div>
+      <div id="divApi" class="alerta" style="display:none;" >
+        <span class="icono"></span>
+        <span class="texto" id="spanApi"></span>
+        <span class="cerrar" onclick="cerrarAlerta()">&times;</span>
+
+      </div>
+
+      <div>
+        <span class="canRegistrosLabel">Registros:</span><span class="canRegistrosValue" id="spanRegirstros">0</span>
+        <span class="limiteRegistros" id="limiteRegistros"></span>
+      </div>
+      <table id="tablaDatos"></table>
+      <div><span class="canRegistrosValue" id="toppagina"></span></div>
+    </div>
+
+    <script>
+      // Crear la tabla con los datos recibidos de la API Rest
+      var tabla = new Tabulator("#tablaDatos", {
+        //data: data,
+        layout: "fitColumns",
+        autoColumns: true,
+      });
+    </script>
+  </body>
+</html>

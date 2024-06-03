@@ -1,0 +1,285 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 1px;
+    min-width: 780px;  
+    }
+    
+    h1 {
+    text-align: center;
+    margin-top: 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin-top: 0;
+        }
+    
+    .container {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    
+    .form-group {
+    margin-bottom: 1px;
+    }
+    
+    .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1px;
+    }
+    
+    .form-group input {
+        border-radius: 3px;
+        padding: 2px;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-sizing: border-box;
+        font-size:16px;
+    }
+
+    
+    /* .form-group input[type="date"] {
+    border-radius: 3px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    }
+     */
+
+    .form-group select {
+        border-radius: 3px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        }
+    
+    .button-group {
+    text-align: right;
+    margin-bottom: 5px;
+    }
+    
+    .button-group button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    }
+    
+    .button-group button:hover {
+    background-color: #3e8e41;
+    }
+
+    #btnActualizar{
+        background-color:#0000
+    }
+    
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    th {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th:hover {
+        background-color: #3e8e41;
+    }
+    
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    
+    #tabla td {
+        border: none;
+        padding: 8px;
+        vertical-align: top;
+    }
+    
+    #tabla td .txt {
+        height: 35px;    
+        border: 1px solid #ddd;    
+        border-radius: 3px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    #tabla td .pr {
+        width: calc(100% - 19px);
+    }
+    
+    #tabla td .prr {
+        width: calc(100% - 11px);
+    }
+
+    /* loading */
+
+    #loadingContainer {
+        display: none; /* Inicialmente oculto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(4, 51, 180, 0.5); /* Fondo semitransparente */
+        z-index: 9999; /* Por encima de otros elementos */
+      }
+      
+      #loadingContainer::after {
+        content: "Cargando..."; /* Texto del elemento de carga */
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+      }
+      /* fin loading  */
+
+
+      /* botones */
+      .btnVer {
+        box-shadow:inset 0px 1px 0px 0px #54a3f7;
+        background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+        background-color:#007dc1;
+        border-radius:3px;
+        border:1px solid #124d77;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:13px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #154682;
+    }
+    .btnVer:hover {
+        background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+        background-color:#0061a7;
+    }
+    .btnVer:active {
+        position:relative;
+        top:1px;
+    }
+
+
+    .btnActualizar {
+        box-shadow:inset 0px 1px 0px 0px #6bf556;
+        background:linear-gradient(to bottom, #00bf16 5%, #16a600 100%);
+        background-color:#00bf16;
+        border-radius:3px;
+        border:1px solid #1b7513;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:13px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #248016;
+    }
+    .btnActualizar:hover {
+        background:linear-gradient(to bottom, #16a600 5%, #00bf16 100%);
+        background-color:#16a600;
+    }
+    .btnActualizar:active {
+        position:relative;
+        top:1px;
+    }
+
+    .btnDescargar {
+        box-shadow:inset 0px 1px 0px 0px #fff6af;
+        background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+        background-color:#ffec64;
+        border-radius:3px;
+        border:1px solid #ffaa22;
+        display:inline-block;
+        cursor:pointer;
+        color:#333333;
+        font-family:Arial;
+        font-size:13px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #ffee66;
+    }
+    .btnDescargar:hover {
+        background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+        background-color:#ffab23;
+    }
+    .btnDescargar:active {
+        position:relative;
+        top:1px;
+    }
+    
+      /* fin botones */
+
+
+    /* mensaje api */
+    .alerta {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 10px;
+        border: 1px solid #f5c6cb;
+        border-radius: 4px;
+        display: flex;        
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .icono {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      
+      .cerrar {
+        cursor: pointer;
+      }
+      
+      /* Opcional: Agrega estilos de animación o transición */
+      .alerta {
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      .alerta.cerrada {
+        opacity: 0;
+      }
+      
+    /* fin mensaje api */
+
+    /* registros*/
+      .canRegistrosLabel{
+          font-size: 12px;
+          margin-right: 5px;
+      }
+
+      .canRegistrosValue{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .limiteRegistros{
+        font-size: 14px;
+        font-weight: bold;
+        color:red;
+        padding-left: 20px;
+    }
+    /* fin registros*/
